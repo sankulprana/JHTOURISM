@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand Tourism Connect - Discover the Undiscovered</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1600x900/22c55e/ffffff?text=Hundru+Falls');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12;
+        }
+        .feature-card {
+            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out;
+        }
+        .feature-icon {
+            @apply text-4xl text-emerald-500 mb-4;
+        }
+        .destination-card {
+            @apply relative overflow-hidden rounded-xl shadow-lg group;
+        }
+        .destination-overlay {
+            @apply absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col justify-end p-6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-emerald-600">
+                <i class="fas fa-leaf mr-2"></i>JharkhandConnect
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-600 hover:text-emerald-600 transition">Home</a>
+                <a href="#features" class="text-gray-600 hover:text-emerald-600 transition">Features</a>
+                <a href="#destinations" class="text-gray-600 hover:text-emerald-600 transition">Destinations</a>
+                <a href="#planner" class="text-gray-600 hover:text-emerald-600 transition">Plan Your Trip</a>
+                <a href="#marketplace" class="text-gray-600 hover:text-emerald-600 transition">Marketplace</a>
+                <a href="#dashboard" class="text-gray-600 hover:text-emerald-600 transition">For Officials</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-emerald-600">Home</a>
+            <a href="#features" class="block py-2 text-gray-600 hover:text-emerald-600">Features</a>
+            <a href="#destinations" class="block py-2 text-gray-600 hover:text-emerald-600">Destinations</a>
+            <a href="#planner" class="block py-2 text-gray-600 hover:text-emerald-600">Plan Your Trip</a>
+            <a href="#marketplace" class="block py-2 text-gray-600 hover:text-emerald-600">Marketplace</a>
+            <a href="#dashboard" class="block py-2 text-gray-600 hover:text-emerald-600">For Officials</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-white pt-16">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Discover the Soul of Jharkhand</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 drop-shadow-md">Your AI-powered guide to the hidden gems of eco and cultural tourism in India's heartland.</p>
+            <a href="#planner" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+                Start Planning Your Adventure
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">A Smarter Way to Explore</h2>
+                <p class="section-subtitle">Leveraging cutting-edge technology to provide you with a seamless, secure, and personalized travel experience.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: AI Planner -->
+                    <div class="feature-card">
+                        <i class="fas fa-robot feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AI Itinerary Planner</h3>
+                        <p class="text-gray-600">Get personalized travel plans based on your interests, budget, and time. Our AI creates the perfect journey just for you.</p>
+                    </div>
+                    <!-- Feature 2: Blockchain Security -->
+                    <div class="feature-card">
+                        <i class="fas fa-shield-halved feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Blockchain Verified</h3>
+                        <p class="text-gray-600">Book with confidence. Our platform uses blockchain for secure transactions and verification of guides and services.</p>
+                    </div>
+                    <!-- Feature 3: AR/VR Previews -->
+                    <div class="feature-card">
+                        <i class="fas fa-vr-cardboard feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">AR/VR Previews</h3>
+                        <p class="text-gray-600">Experience destinations before you visit. Our immersive AR/VR previews bring Jharkhand's beauty to your screen.</p>
+                    </div>
+                    <!-- Feature 4: Real-time Info -->
+                    <div class="feature-card">
+                        <i class="fas fa-map-marked-alt feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Real-Time Info</h3>
+                        <p class="text-gray-600">Navigate like a local with real-time transport information, interactive maps, and geo-location services.</p>
+                    </div>
+                    <!-- Feature 5: Local Marketplace -->
+                    <div class="feature-card">
+                        <i class="fas fa-store feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Integrated Marketplace</h3>
+                        <p class="text-gray-600">Support local communities by buying authentic tribal handicrafts, booking homestays, and finding unique eco-tours.</p>
+                    </div>
+                    <!-- Feature 6: AI Chatbot -->
+                    <div class="feature-card">
+                        <i class="fas fa-comments feature-icon"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Multilingual Chatbot</h3>
+                        <p class="text-gray-600">Have questions? Our 24/7 AI-powered chatbot is here to assist you in multiple languages, anytime you need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Destinations Section -->
+        <section id="destinations" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Popular Destinations</h2>
+                <p class="section-subtitle">From serene hills and majestic waterfalls to sacred temples and lush national parks, Jharkhand has it all.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Netarhat -->
+                    <div class="destination-card lg:col-span-2">
+                        <img src="https://placehold.co/800x400/34d399/ffffff?text=Netarhat+Hills" alt="Netarhat - Queen of Chotanagpur" class="w-full h-full object-cover">
+                        <div class="destination-overlay">
+                            <h3 class="text-2xl font-bold text-white">Netarhat</h3>
+                            <p class="text-white opacity-90">The 'Queen of Chotanagpur', famous for its breathtaking sunrises and sunsets.</p>
+                        </div>
+                    </div>
+                    <!-- Patratu Valley -->
+                    <div class="destination-card">
+                        <img src="https://placehold.co/400x400/60a5fa/ffffff?text=Patratu+Valley" alt="Patratu Valley" class="w-full h-full object-cover">
+                        <div class="destination-overlay">
+                            <h3 class="text-xl font-bold text-white">Patratu Valley</h3>
+                            <p class="text-white opacity-90">A stunning landscape with winding roads and a massive dam.</p>
+                        </div>
+                    </div>
+                    <!-- Deoghar -->
+                    <div class="destination-card">
+                        <img src="https://placehold.co/400x400/f59e0b/ffffff?text=Deoghar" alt="Deoghar" class="w-full h-full object-cover">
+                         <div class="destination-overlay">
+                            <h3 class="text-xl font-bold text-white">Deoghar</h3>
+                            <p class="text-white opacity-90">A major Hindu pilgrimage site, home to the Baidyanath Temple.</p>
+                        </div>
+                    </div>
+                     <!-- Betla National Park -->
+                    <div class="destination-card">
+                        <img src="https://placehold.co/400x400/84cc16/ffffff?text=Betla+National+Park" alt="Betla National Park" class="w-full h-full object-cover">
+                        <div class="destination-overlay">
+                            <h3 class="text-xl font-bold text-white">Betla National Park</h3>
+                            <p class="text-white opacity-90">A diverse wildlife sanctuary with tigers, elephants, and rich flora.</p>
+                        </div>
+                    </div>
+                    <!-- Hundru Falls -->
+                    <div class="destination-card lg:col-span-2">
+                        <img src="https://placehold.co/800x400/a78bfa/ffffff?text=Hundru+Falls" alt="Hundru Falls" class="w-full h-full object-cover">
+                        <div class="destination-overlay">
+                            <h3 class="text-2xl font-bold text-white">Hundru Falls</h3>
+                            <p class="text-white opacity-90">Witness the Subarnarekha river fall from a magnificent height of 322 feet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Itinerary Planner Section -->
+        <section id="planner" class="py-20 bg-emerald-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Create Your Perfect Trip</h2>
+                <p class="section-subtitle">Tell us your preferences, and our AI will craft a unique itinerary for your Jharkhand adventure.</p>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
+                    <form id="itinerary-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Interests -->
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-700 mb-4">What are your interests?</h4>
+                                <div class="space-y-3">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interest" value="nature" class="h-5 w-5 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500">
+                                        <span class="ml-3 text-gray-700">Nature & Wildlife</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interest" value="culture" class="h-5 w-5 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500">
+                                        <span class="ml-3 text-gray-700">Culture & Heritage</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interest" value="adventure" class="h-5 w-5 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500">
+                                        <span class="ml-3 text-gray-700">Adventure & Trekking</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="interest" value="spiritual" class="h-5 w-5 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500">
+                                        <span class="ml-3 text-gray-700">Spiritual & Pilgrimage</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Duration & Budget -->
+                            <div>
+                                <div class="mb-6">
+                                    <label for="duration" class="block text-lg font-semibold text-gray-700 mb-2">Trip Duration (days)</label>
+                                    <input type="range" id="duration" min="1" max="14" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                    <div class="text-center text-gray-600 mt-2"><span id="duration-value">5</span> days</div>
+                                </div>
+                                <div>
+                                    <label for="budget" class="block text-lg font-semibold text-gray-700 mb-2">Budget</label>
+                                    <select id="budget" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                                        <option value="budget">Budget-friendly</option>
+                                        <option value="mid" selected>Mid-range</option>
+                                        <option value="luxury">Luxury</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-10">
+                            <button type="submit" id="generate-btn" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-12 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+                                <i class="fas fa-magic mr-2"></i>Generate Itinerary
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Itinerary Result -->
+                <div id="itinerary-result" class="max-w-4xl mx-auto mt-12">
+                    <!-- Loading spinner and result will be injected here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Connect with Local Culture</h2>
+                <p class="section-subtitle">Discover authentic tribal handicrafts, book cozy homestays, and experience the real Jharkhand by supporting local artisans and communities.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <!-- Handicrafts -->
+                    <div class="feature-card text-center">
+                         <img src="https://placehold.co/400x300/fbbf24/ffffff?text=Tribal+Art" alt="Tribal Art" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tribal Handicrafts</h3>
+                        <p class="text-gray-600 mb-4">Explore a rich collection of Dokra art, Sohrai paintings, and bamboo crafts directly from the artisans.</p>
+                        <a href="#" class="font-semibold text-emerald-600 hover:text-emerald-700">Shop Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Homestays -->
+                    <div class="feature-card text-center">
+                        <img src="https://placehold.co/400x300/4ade80/ffffff?text=Cozy+Homestay" alt="Homestay" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Eco Homestays</h3>
+                        <p class="text-gray-600 mb-4">Stay with local families, enjoy traditional cuisine, and experience the warm hospitality of Jharkhand.</p>
+                        <a href="#" class="font-semibold text-emerald-600 hover:text-emerald-700">Find a Stay <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <!-- Local Experiences -->
+                    <div class="feature-card text-center">
+                        <img src="https://placehold.co/400x300/f87171/ffffff?text=Cultural+Festival" alt="Cultural Events" class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cultural Events</h3>
+                        <p class="text-gray-600 mb-4">Find information about local festivals, tribal dance performances, and rural tourism events.</p>
+                        <a href="#" class="font-semibold text-emerald-600 hover:text-emerald-700">Explore Events <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Dashboard Section -->
+        <section id="dashboard" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <i class="fas fa-chart-line text-5xl text-emerald-400 mb-4"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Data-Driven Tourism Management</h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">Our platform provides a powerful analytics dashboard for tourism officials to monitor trends, analyze feedback, and make informed decisions for sustainable growth.</p>
+                <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                    Access Official Dashboard
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4"><i class="fas fa-leaf mr-2 text-emerald-500"></i>JharkhandConnect</h3>
+                    <p class="text-gray-400">Promoting sustainable and inclusive eco & cultural tourism in Jharkhand.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#destinations" class="text-gray-400 hover:text-white">Destinations</a></li>
+                        <li><a href="#planner" class="text-gray-400 hover:text-white">Plan Trip</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Travel Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2024 Jharkhand Tourism Connect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Duration Slider
+        const durationSlider = document.getElementById('duration');
+        const durationValue = document.getElementById('duration-value');
+        durationSlider.addEventListener('input', (event) => {
+            durationValue.textContent = event.target.value;
+        });
+
+        // Itinerary Planner Logic
+        const itineraryForm = document.getElementById('itinerary-form');
+        const itineraryResult = document.getElementById('itinerary-result');
+        const generateBtn = document.getElementById('generate-btn');
+
+        itineraryForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked')).map(el => el.value);
+            const duration = durationSlider.value;
+            const budget = document.getElementById('budget').value;
+
+            // Show loading state and disable button
+            itineraryResult.innerHTML = `
+                <div class="text-center">
+                    <i class="fas fa-spinner fa-spin text-4xl text-emerald-500"></i>
+                    <p class="mt-4 text-gray-600">Our AI is crafting your personalized journey...</p>
+                </div>
+            `;
+            generateBtn.disabled = true;
+            generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            try {
+                const generatedItinerary = await callGemini(interests, duration, budget);
+                renderItinerary(generatedItinerary, interests, duration, budget);
+            } catch (error) {
+                console.error("Error generating itinerary:", error);
+                itineraryResult.innerHTML = `
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative" role="alert">
+                        <strong class="font-bold">Oops!</strong>
+                        <span class="block sm:inline">Something went wrong while creating your itinerary. Please try again.</span>
+                    </div>
+                `;
+            } finally {
+                // Re-enable button
+                generateBtn.disabled = false;
+                generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+
+        async function callGemini(interests, duration, budget) {
+            const apiKey = ""; // Canvas will provide the key
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            // Constructing a detailed prompt for Gemini
+            const prompt = `
+                You are an expert travel planner specializing in Jharkhand, India. Create a personalized travel itinerary.
+                User Preferences:
+                - Duration: ${duration} days
+                - Interests: ${interests.length > 0 ? interests.join(', ') : 'general sightseeing'}
+                - Budget: ${budget}
+
+                Instructions:
+                1.  Generate a detailed, day-by-day itinerary for the exact number of days specified.
+                2.  The output MUST be a valid JSON object. Do not include any text, explanation, or markdown formatting before or after the JSON object.
+                3.  The JSON object must have a single root key: "itinerary", which is an array of day objects.
+                4.  Each day object in the array must have the following keys: "day" (number), "location" (string), "morning" (string), "afternoon" (string), "evening" (string), "travel_tip" (string), and "food_tip" (string).
+                5.  Ensure the locations and activities are authentic to Jharkhand and align with the user's interests. Make the descriptions engaging and practical.
+                6.  If interests are mixed, create a balanced plan. If no interests are selected, create a general plan covering major highlights.
+            `;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+            };
+            
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                throw new Error(`API call failed with status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            const candidate = result.candidates?.[0];
+
+            if (!candidate || !candidate.content?.parts?.[0]?.text) {
+                throw new Error("Invalid response structure from API.");
+            }
+            
+            // The model's response is expected to be a JSON string.
+            const jsonText = candidate.content.parts[0].text;
+            // Sometimes the model might wrap the JSON in markdown, so we clean it.
+            const cleanedJsonText = jsonText.replace(/```json/g, '').replace(/```/g, '').trim();
+
+            try {
+                return JSON.parse(cleanedJsonText);
+            } catch (e) {
+                console.error("Failed to parse JSON response:", cleanedJsonText);
+                throw new Error("Could not parse the itinerary from the AI's response.");
+            }
+        }
+        
+        function renderItinerary(data, interests, duration, budget) {
+            if (!data.itinerary || !Array.isArray(data.itinerary)) {
+                 throw new Error("Itinerary data is not in the expected format.");
+            }
+            
+            let daysHTML = data.itinerary.map(day => `
+                <div class="day-item bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-emerald-500">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">Day ${day.day}: <span class="text-emerald-600">${day.location}</span></h4>
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-700">Morning:</h5>
+                            <p class="text-gray-600 pl-4">${day.morning}</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-700">Afternoon:</h5>
+                            <p class="text-gray-600 pl-4">${day.afternoon}</p>
+                        </div>
+                         <div>
+                            <h5 class="font-semibold text-gray-700">Evening:</h5>
+                            <p class="text-gray-600 pl-4">${day.evening}</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-200 flex flex-col md:flex-row gap-4">
+                            <div class="flex-1 bg-emerald-50 p-3 rounded-lg">
+                                <h6 class="font-bold text-emerald-800"><i class="fas fa-car mr-2"></i>Travel Tip</h6>
+                                <p class="text-sm text-emerald-700">${day.travel_tip}</p>
+                            </div>
+                            <div class="flex-1 bg-amber-50 p-3 rounded-lg">
+                                 <h6 class="font-bold text-amber-800"><i class="fas fa-utensils mr-2"></i>Foodie Tip</h6>
+                                <p class="text-sm text-amber-700">${day.food_tip}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const formattedInterests = interests.length > 0 
+                ? interests.map(i => i.charAt(0).toUpperCase() + i.slice(1)).join(' & ')
+                : 'General';
+            
+            const itineraryTitle = `Your ${duration}-Day ${formattedInterests} Trip in Jharkhand`;
+
+            itineraryResult.innerHTML = `
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-inner">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">${itineraryTitle}</h3>
+                    <div>${daysHTML}</div>
+                    <div class="mt-8 text-center bg-white p-6 rounded-lg shadow">
+                         <p class="text-gray-700"><strong>Next Steps:</strong> This itinerary is a personalized suggestion. You can now proceed to book blockchain-verified guides, accommodations, and transport for your trip.</p>
+                         <p class="text-sm text-gray-500 mt-1">Based on a <strong>${budget}</strong> preference, we will prioritize options that match your selection.</p>
+                         <button class="mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-calendar-check mr-2"></i>Finalize & Book Trip
+                         </button>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
+
